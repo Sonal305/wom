@@ -10,15 +10,16 @@ void best_preferred_dia(int *scrp,int *ifshort, int *d)
     //for loop to find min possible scrap left
     for(i=0;i<3;i++)
     {
+        if(scrp[i]==min_scrp)
+        {
+           count++;
+        }
         if(scrp[i]<min_scrp)
             {
                 min_scrp=scrp[i];
                 count=1;
             }
-        if(scrp[i]==min_scrp)
-        {
-           count++;
-        }
+        
     }
 
    int choice;
