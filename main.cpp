@@ -10,7 +10,7 @@ void best_preferred_dia(int *scrp,int *ifshort, int *d)
     //for loop to find min possible scrap left
     for(i=0;i<3;i++)
     {
-        if(scrp[i]==min_scrp)
+         if(scrp[i]==min_scrp)
         {
            count++;
         }
@@ -19,7 +19,7 @@ void best_preferred_dia(int *scrp,int *ifshort, int *d)
                 min_scrp=scrp[i];
                 count=1;
             }
-        
+
     }
 
    int choice;
@@ -103,7 +103,7 @@ cin>>choice;
     if(flag==1)
     break;
 }
-
+cout<<endl<<endl;
 
 }
 int main()
@@ -113,13 +113,17 @@ int main()
     int i;
     int scrap[3];
     int short_length_bar[3]={0,0,0};
+    int dia[3]={10,12,16};
+
     cout<<"Enter Billet Length in meters:  ";
     cin>>billet_length;
 
-    //billet_length1=billet_length0*(1-(loss/100));
 
+     /* if there is an estimated loss given then the volume of billet changes as
+         billet volume = billet_length*150*150*(1-(loss/100))
 
-    int dia[3]={10,12,16};
+      */
+
 
 
         for(i=0;i<3;i++)
